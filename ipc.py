@@ -12,7 +12,7 @@ class IPC:
         await ctx.send(self.bot.instance)
 
     @commands.command(name="global")
-    @commands.check(repo.is_owner)
+    @commands.is_owner()
     async def global_(self, ctx, command: str, *, args: str):
         """ Executes the specified command across the other instances
 
